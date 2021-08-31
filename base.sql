@@ -68,12 +68,13 @@ CREATE TABLE Telephone(
 #------------------------------------------------------------
 
 CREATE TABLE AdressePostal(
+        id               Int  Auto_increment  NOT NULL ,
         AdressePostal    Varchar (50) NOT NULL ,
         NomAdressePostal Varchar (20) NOT NULL ,
         CodePostal       Varchar (5) NOT NULL ,
         Ville            Varchar (20) NOT NULL ,
         numero           Int NOT NULL
-	,CONSTRAINT AdressePostal_PK PRIMARY KEY (AdressePostal)
+	,CONSTRAINT AdressePostal_PK PRIMARY KEY (id)
 
 	,CONSTRAINT AdressePostal_Particulier_FK FOREIGN KEY (numero) REFERENCES Particulier(numero)
 )ENGINE=InnoDB;
